@@ -9,7 +9,7 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
-
+/[Aa]ssets/Imported Packages/
 # Never ignore Asset meta data
 !/[Aa]ssets/**/*.meta
 
@@ -58,3 +58,5 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+Assets/Imported Packages/Low Poly Free Vegetation Kit/Scenes/Scene 2/LightingData.asset
+Assets/Imported Packages/Low Poly Free Vegetation Kit/Scenes/Scene 2/LightingData.asset.meta
