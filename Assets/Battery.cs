@@ -10,7 +10,6 @@ public class Battery : MonoBehaviour
         {
             other.GetComponent<Torch>().Increase_Battery_Torch();
             Destroy(gameObject);
-            //PickUp Done
         }
     }
 }
