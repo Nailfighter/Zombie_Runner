@@ -279,9 +279,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   torch_light: {fileID: 1812644576}
   Min_Spot_Angle: 40
-  Max_Spot_Angle: 100
+  Max_Spot_Angle: 90
   Min_Int: 0.5
-  Max_Int: 3
+  Max_Int: 1.5
   Dec_Spot: 0.5
   Dec_Int: 0.1
   Decreasing_Speed: 1.5
@@ -423,7 +423,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 3
+  m_Intensity: 1.5
   m_Range: 80
   m_SpotAngle: 80
   m_InnerSpotAngle: 8
