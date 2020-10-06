@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Resources;
 using UnityEngine;
 
 public class Torch : MonoBehaviour
@@ -75,5 +76,12 @@ public class Torch : MonoBehaviour
         torch_light.spotAngle = Max_Spot_Angle;
         StartCoroutine(Angle_Dim_Light());
         StartCoroutine(Spot_Dim_Light());
+    }
+
+    public void Ultimate_torch()
+    {
+        StopAllCoroutines();
+        torch_light.intensity = Max_Int;
+        torch_light.spotAngle = Max_Spot_Angle;
     }
 }
