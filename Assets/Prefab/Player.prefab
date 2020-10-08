@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 134752527}
   - component: {fileID: 924167194}
   - component: {fileID: 1774708759}
+  - component: {fileID: 3930171830868275218}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -176,10 +177,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 2000000}
   movementSettings:
-    ForwardSpeed: 9
+    Can_Sprint: 1
+    ForwardSpeed: 5
     BackwardSpeed: 5
     StrafeSpeed: 7
-    RunMultiplier: 1.5
+    RunMultiplier: 2
     RunKey: 304
     CrouchKey: 306
     JumpForce: 50
@@ -216,21 +218,22 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    CurrentTargetSpeed: 8
+    CurrentTargetSpeed: 7
+    m_Running: 0
   mouseLook:
     XSensitivity: 2
     YSensitivity: 2
     clampVerticalRotation: 1
     MinimumX: -45
     MaximumX: 90
-    smooth: 1
+    smooth: 0
     smoothTime: 18
     lockCursor: 1
   advancedSettings:
     groundCheckDistance: 0.1
     stickToGroundHelperDistance: 0.6
     slowDownRate: 20
-    airControl: 0
+    airControl: 1
     shellOffset: 0
 --- !u!114 &134752527
 MonoBehaviour:
@@ -244,7 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95220aa26210faf4a80e6105337729d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health_P: 100
+  Health_P: 150
 --- !u!114 &924167194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,10 +284,22 @@ MonoBehaviour:
   Min_Spot_Angle: 40
   Max_Spot_Angle: 90
   Min_Int: 0.5
-  Max_Int: 1.5
+  Max_Int: 2
   Dec_Spot: 0.5
   Dec_Int: 0.1
-  Decreasing_Speed: 1.5
+  Decreasing_Speed: 0.75
+--- !u!114 &3930171830868275218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41b754f88369dc14c92edd56fa78a5b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &428087785
 GameObject:
   m_ObjectHideFlags: 0
@@ -423,7 +438,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.5
+  m_Intensity: 3
   m_Range: 80
   m_SpotAngle: 80
   m_InnerSpotAngle: 8
@@ -689,12 +704,28 @@ PrefabInstance:
       propertyPath: Ammo_Info
       value: 
       objectReference: {fileID: 924167194}
+    - target: {fileID: 808418152777377087, guid: 6f1a7354265853f44b0ed5e2e43676ad,
+        type: 3}
+      propertyPath: bullet_damage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 808418152777377087, guid: 6f1a7354265853f44b0ed5e2e43676ad,
+        type: 3}
+      propertyPath: Gun_Range
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 808418152777377087, guid: 6f1a7354265853f44b0ed5e2e43676ad,
+        type: 3}
+      propertyPath: Shoot_Delay
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8845317872119837424, guid: 6f1a7354265853f44b0ed5e2e43676ad,
         type: 3}
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1687634496038902148, guid: 6f1a7354265853f44b0ed5e2e43676ad, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6f1a7354265853f44b0ed5e2e43676ad, type: 3}
 --- !u!4 &593926036882147783 stripped
 Transform:
@@ -714,6 +745,16 @@ PrefabInstance:
       propertyPath: Ammo_Info
       value: 
       objectReference: {fileID: 924167194}
+    - target: {fileID: -356493066364939624, guid: 533555980da9b594fa9c08919c6b82fd,
+        type: 3}
+      propertyPath: bullet_damage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: -356493066364939624, guid: 533555980da9b594fa9c08919c6b82fd,
+        type: 3}
+      propertyPath: Shoot_Delay
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 2792523511822033406, guid: 533555980da9b594fa9c08919c6b82fd,
         type: 3}
       propertyPath: playOnAwake
@@ -868,6 +909,16 @@ PrefabInstance:
       propertyPath: Ammo_Info
       value: 
       objectReference: {fileID: 924167194}
+    - target: {fileID: 2357152202957802427, guid: 8b0b86b42def11849a8eba21f4a6a684,
+        type: 3}
+      propertyPath: bullet_damage
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 2357152202957802427, guid: 8b0b86b42def11849a8eba21f4a6a684,
+        type: 3}
+      propertyPath: Gun_Range
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5225389443641692451, guid: 8b0b86b42def11849a8eba21f4a6a684,
         type: 3}
       propertyPath: playOnAwake
