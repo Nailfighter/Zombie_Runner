@@ -37,11 +37,16 @@ public class Ammo : MonoBehaviour
     public void Reduce_Ammo(Ammo_Types ammo_Type)
     {
         Get_Ammo_Slot(ammo_Type).Total_Ammo--;
-        Ammo_Text.text = Get_Ammo_Slot(ammo_Type).Total_Ammo.ToString();
+        Ammo_Display(ammo_Type);
     }
-    public void Increase_Ammo(Ammo_Types ammo_Type,int Increase_in_ammo)
+    public void Increase_Ammo(Ammo_Types ammo_Type, int Increase_in_ammo)
     {
         Get_Ammo_Slot(ammo_Type).Total_Ammo+=Increase_in_ammo;
+        Ammo_Display(ammo_Type);
+    }
+
+    public void Ammo_Display(Ammo_Types ammo_Type)
+    {
         Ammo_Text.text = Get_Ammo_Slot(ammo_Type).Total_Ammo.ToString();
     }
 }

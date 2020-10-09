@@ -27,6 +27,7 @@ public class Weapon_Switcher : MonoBehaviour
             if (Weapon_Index == Current_Weapon)
             {
                 Weapon.transform.gameObject.SetActive(true);
+                FindObjectOfType<Ammo>().Ammo_Display(Weapon.transform.gameObject.GetComponent<Weapon>().Ammo_Type);
             }
            else
             {

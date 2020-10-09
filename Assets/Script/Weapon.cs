@@ -12,7 +12,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] int bullet_damage=20;
     [SerializeField] float Gun_Range=100f;
     [SerializeField] Ammo Ammo_Info;
-    [SerializeField] Ammo_Types Ammo_Type;
+    public Ammo_Types Ammo_Type;
     [SerializeField] float Shoot_Delay = 1f;
 
     bool is_shoot=false;

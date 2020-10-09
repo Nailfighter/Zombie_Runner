@@ -247,7 +247,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95220aa26210faf4a80e6105337729d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health_P: 150
+  Health_P: 10
+  Health_Slider: {fileID: 0}
+  Death_UI: {fileID: 0}
 --- !u!114 &924167194
 MonoBehaviour:
   m_ObjectHideFlags: 0
