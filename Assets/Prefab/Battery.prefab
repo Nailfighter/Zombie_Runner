@@ -458,7 +458,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 0.53000975, g: 0.745283, b: 0.1546814, a: 1}
   m_Intensity: 5
-  m_Range: 1
+  m_Range: 5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -2471,6 +2471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bb6eb6605fa1144f87f32c1c9d5ff2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Ultimate_Battery: 0
 --- !u!136 &3365220501336212491
 CapsuleCollider:
   m_ObjectHideFlags: 0

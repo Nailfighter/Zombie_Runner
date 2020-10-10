@@ -63,7 +63,14 @@ public class Enemy_AI : MonoBehaviour
     {
         Enemy_Animator.SetTrigger("Move");
         Enemy_Animator.SetBool("Attack", false);
-        enemy_nav.SetDestination(player.position);
+        try
+        {
+            enemy_nav.SetDestination(player.position);
+        }
+        catch
+        {
+        }
+
     }
     void Combat()
     {

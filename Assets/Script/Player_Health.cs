@@ -28,7 +28,6 @@ public class Player_Health : MonoBehaviour
 
     IEnumerator Post_Processsing_Hit()
     {
-
         m_Vignette.enabled.Override(true);
         yield return new WaitForSeconds(1f);
         m_Vignette.enabled.Override(false);
