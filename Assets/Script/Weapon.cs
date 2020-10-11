@@ -7,16 +7,23 @@ using UnityEngine.UIElements;
 
 public class Weapon : MonoBehaviour
 {
+    public AudioSource AudioSource;
+    [SerializeField] AudioClip Weapon_Sound;
     [SerializeField] GameObject Impact_Particle_Sys;
     [SerializeField] ParticleSystem Muzzle_Flash;
     [SerializeField] int bullet_damage=20;
     [SerializeField] float Gun_Range=100f;
     [SerializeField] Ammo Ammo_Info;
     public Ammo_Types Ammo_Type;
+    [SerializeField] bool Auto=false;
     [SerializeField] float Shoot_Delay = 1f;
 
     bool is_shoot=false;
 
+    private void Start()
+    {
+        AudioSource = GetComponent<AudioSource>();
+    }
 
     private void OnEnable()
     {
@@ -30,10 +37,18 @@ public class Weapon : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetButtonDown("Fire1") && Ammo_Info.Ammo_Left(Ammo_Type)>0 && !is_shoot)
+        if (Auto)
+        {
+            if (Input.GetButton("Fire1") && Ammo_Info.Ammo_Left(Ammo_Type) > 0 && !is_shoot)
+            {
+                StartCoroutine(shoot());
+            }
+        }
+        else if (Input.GetButtonDown("Fire1") && Ammo_Info.Ammo_Left(Ammo_Type) > 0 && !is_shoot)
         {
             StartCoroutine(shoot());
         }
+
 
     }
 
@@ -42,6 +57,7 @@ public class Weapon : MonoBehaviour
  
         is_shoot = true;
         Muzzle_Flash.Play();
+        AudioSource.PlayOneShot(Weapon_Sound);
         RaycastHit hit_object;
         Transform camera = Camera.main.transform;
         if(Physics.Raycast(camera.position, camera.forward, out hit_object, Gun_Range))
