@@ -1028,7 +1028,7 @@ GameObject:
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1066,9 +1066,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.3651166
-  m_Height: 2.2
+  m_Height: 1.87
   m_Direction: 1
-  m_Center: {x: 0.024967194, y: 0.7900001, z: 0.1598506}
+  m_Center: {x: 0.024967194, y: 0.85, z: 0.1598506}
 --- !u!195 &7745969220127509020
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1088,7 +1088,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: -0.1
+  m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &7745969220127509017

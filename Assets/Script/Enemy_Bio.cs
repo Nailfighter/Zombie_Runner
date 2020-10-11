@@ -23,6 +23,7 @@ namespace Assets.Script
         {
             GetComponent<Enemy_AI>().Enemy_Animator.SetTrigger("Is_Dead");
             GetComponent<NavMeshAgent>().enabled = false;
+            GetComponent<CapsuleCollider>().enabled = false;
             GetComponent<Enemy_AI>().enabled = false;
             enabled = false;
         }

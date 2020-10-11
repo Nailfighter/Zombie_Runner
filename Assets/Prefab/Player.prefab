@@ -309,7 +309,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95220aa26210faf4a80e6105337729d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health_P: 150
+  m_Volume: {fileID: 804092295931918909}
+  m_Vignette: {fileID: 0}
+  color_blood: {r: 1, g: 0, b: 0, a: 1}
+  Health_P: 500
   Health_Slider: {fileID: 0}
   Death_UI: {fileID: 0}
 --- !u!114 &924167194
@@ -326,11 +329,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ammo_Slot:
   - Ammo_Types: 0
-    Total_Ammo: 1000
+    Total_Ammo: 25
   - Ammo_Types: 1
-    Total_Ammo: 1000
+    Total_Ammo: 7
   - Ammo_Types: 2
-    Total_Ammo: 1000
+    Total_Ammo: 30
   Ammo_Text: {fileID: 0}
 --- !u!114 &1774708759
 MonoBehaviour:
@@ -351,7 +354,7 @@ MonoBehaviour:
   Max_Int: 2
   Dec_Spot: 0.5
   Dec_Int: 0.1
-  Decreasing_Speed: 0.75
+  Decreasing_Speed: 1.25
 --- !u!114 &3930171830868275218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -475,7 +478,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1812644575
 Transform:
   m_ObjectHideFlags: 0
@@ -704,7 +707,7 @@ MonoBehaviour:
   sharedProfile: {fileID: 11400000, guid: 8ddb0133ee37bdc41abc42071318c090, type: 2}
   isGlobal: 1
   blendDistance: 0
-  weight: 1
+  weight: 0
   priority: 1
 --- !u!1 &6234495338289401960
 GameObject:

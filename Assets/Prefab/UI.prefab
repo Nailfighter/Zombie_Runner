@@ -1083,7 +1083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inc: 1
-  Use_Sprint_Speed: 0.5
+  Use_Sprint_Speed: 2
   Recover_Sprint_Speed: 1
   Bar_Value: 100
   Can_Sprint: 1
@@ -1667,7 +1667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1949,8 +1949,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -1820, y: 111.899994}
-  m_SizeDelta: {x: 164.60016, y: 111.81772}
+  m_AnchoredPosition: {x: -757.79, y: 57.90001}
+  m_SizeDelta: {x: 71.96924, y: 55.6416}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5985419455427636718
 CanvasRenderer:

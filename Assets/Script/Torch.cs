@@ -11,7 +11,7 @@ public class Torch : MonoBehaviour
     [SerializeField] float Dec_Spot, Dec_Int;
     bool decreasing = false;
     [SerializeField] float Decreasing_Speed=1f;
-
+    bool Ultimate_Mode = false;
     void Start()
     {
         Initialise_Battery_Torch();
@@ -40,6 +40,7 @@ public class Torch : MonoBehaviour
 
     public void Increase_Battery_Torch()
     {
+        if (Ultimate_Mode) { return; }
         //intensity
         if (torch_light.intensity + (Max_Int - Min_Int) / 2>Max_Int)
         {
@@ -83,5 +84,6 @@ public class Torch : MonoBehaviour
         StopAllCoroutines();
         torch_light.intensity = Max_Int;
         torch_light.spotAngle = Max_Spot_Angle;
+        Ultimate_Mode = true;
     }
 }
