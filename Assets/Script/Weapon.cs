@@ -7,8 +7,9 @@ using UnityEngine.UIElements;
 
 public class Weapon : MonoBehaviour
 {
-    public AudioSource AudioSource;
+    AudioSource AudioSource;
     [SerializeField] AudioClip Weapon_Sound;
+    [SerializeField] AudioClip Out_Of_ammo;
     [SerializeField] GameObject Impact_Particle_Sys;
     [SerializeField] ParticleSystem Muzzle_Flash;
     [SerializeField] int bullet_damage=20;
@@ -48,7 +49,10 @@ public class Weapon : MonoBehaviour
         {
             StartCoroutine(shoot());
         }
-
+        else if (Input.GetButtonDown("Fire1") && Ammo_Info.Ammo_Left(Ammo_Type) <= 0)
+        {
+            AudioSource.PlayOneShot(Out_Of_ammo);
+        }
 
     }
 

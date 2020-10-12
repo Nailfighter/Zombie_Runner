@@ -144,8 +144,13 @@ PrefabInstance:
     - target: {fileID: 2123388789722629793, guid: 5dd1dba25285f4640b3e4a9cb30c4fcc,
         type: 3}
       propertyPath: Total_Ammo_in_Clip
-      value: 15
+      value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 2123388789722629793, guid: 5dd1dba25285f4640b3e4a9cb30c4fcc,
+        type: 3}
+      propertyPath: Reload
+      value: 
+      objectReference: {fileID: 8300000, guid: 9c17bb776aff45743b62be9c66995b43, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5dd1dba25285f4640b3e4a9cb30c4fcc, type: 3}
 --- !u!4 &7492742819309075870 stripped

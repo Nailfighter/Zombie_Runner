@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Ammo_PickUp : MonoBehaviour
 {
+    [SerializeField] AudioClip Reload;
     [SerializeField] Ammo_Types ammo_Type;
     [SerializeField] int Total_Ammo_in_Clip=10;
 
@@ -12,6 +13,7 @@ public class Ammo_PickUp : MonoBehaviour
         if (other.GetComponent<Ammo>())
         {
             other.GetComponent<Ammo>().Increase_Ammo(ammo_Type, Total_Ammo_in_Clip);
+            other.GetComponent<AudioSource>().PlayOneShot(Reload);
             Destroy(gameObject);
         }
     }

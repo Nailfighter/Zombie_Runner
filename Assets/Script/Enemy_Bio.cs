@@ -21,6 +21,7 @@ namespace Assets.Script
 
         private void Zombie_Dead()
         {
+            gameObject.tag = "Dead_Enemy";
             GetComponent<Enemy_AI>().Enemy_Animator.SetTrigger("Is_Dead");
             GetComponent<NavMeshAgent>().enabled = false;
             GetComponent<CapsuleCollider>().enabled = false;
@@ -37,6 +38,7 @@ namespace Assets.Script
         void Anim_Event_Kill_Player()
         {
             FindObjectOfType<Player_Health>().enemy_hit(Damage_Dealt);
+            FindObjectOfType<Player_Related_Audio>().Hit_Sound();
         }
        
     }
