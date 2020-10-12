@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Dead_Enemy
+  - Enle-123
+  - Enle0
   layers:
   - Default
   - TransparentFX
