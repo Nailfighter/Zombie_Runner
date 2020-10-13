@@ -6,7 +6,7 @@ using UnityEngine;
 public class SecretDoor : MonoBehaviour
 {
     bool door_opened=false;
-    bool is_door_1 = true;
+    [SerializeField] bool is_door_1 = true;
     public void Anim_Sound()
     {
         GetComponent<AudioSource>().Play();

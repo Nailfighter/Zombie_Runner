@@ -144,7 +144,7 @@ PrefabInstance:
     - target: {fileID: 2123388789722629793, guid: 5dd1dba25285f4640b3e4a9cb30c4fcc,
         type: 3}
       propertyPath: Total_Ammo_in_Clip
-      value: 7
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2123388789722629793, guid: 5dd1dba25285f4640b3e4a9cb30c4fcc,
         type: 3}

@@ -8,15 +8,17 @@ public class Battery : MonoBehaviour
     [SerializeField] bool Ultimate_Battery = false;
     private void OnTriggerEnter(Collider other)
     {
-        GetComponent<AudioSource>().PlayOneShot(Battery_Sound);
+        
         if (other.GetComponent<Torch>() && !Ultimate_Battery)
         {
             other.GetComponent<Torch>().Increase_Battery_Torch();
+            other.GetComponent<AudioSource>().PlayOneShot(Battery_Sound);
             Destroy(gameObject);
         }
         if (other.GetComponent<Torch>() && Ultimate_Battery)
         {
             other.GetComponent<Torch>().Ultimate_torch();
+            other.GetComponent<AudioSource>().PlayOneShot(Battery_Sound);
             Destroy(gameObject);
         }
     }
