@@ -9,9 +9,9 @@ public class Music_trigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (Play_A_Clip) { Play_A_audio(); return; }
-        FindObjectOfType<Music_Player>().GetComponent<AudioSource>().clip = Transition_Clip;
-        FindObjectOfType<Music_Player>().GetComponent<AudioSource>().enabled = false;
-        FindObjectOfType<Music_Player>().GetComponent<AudioSource>().enabled = true;
+        GetComponentInParent<AudioSource>().clip = Transition_Clip;
+        GetComponentInParent<AudioSource>().enabled = false;
+        GetComponentInParent<AudioSource>().enabled = true;
         GetComponent<BoxCollider>().enabled = false;
         
     }

@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 using UnityStandardAssets.CrossPlatformInput;
 
 namespace UnityStandardAssets.Characters.FirstPerson
@@ -75,7 +74,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void InternalLockUpdate()
         {
-            if (Input.GetMouseButtonUp(0))
+            if(Input.GetKeyUp(KeyCode.Escape))
+            {
+                m_cursorIsLocked = false;
+            }
+            else if(Input.GetMouseButtonUp(0))
             {
                 m_cursorIsLocked = true;
             }
@@ -107,6 +110,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             return q;
         }
-        
+
     }
 }

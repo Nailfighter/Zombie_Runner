@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/The Real Game.unity
     guid: 290baa79fb5635042b6e068790b53d18
+  - enabled: 1
+    path: Assets/Scenes/Credit.unity
+    guid: e2d36155fd14ce84980bbae64b5b8bc2
+  - enabled: 1
+    path: Assets/Scenes/Trial Ground.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}

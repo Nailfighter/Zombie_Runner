@@ -83,7 +83,7 @@ public class Weapon_Zoomer : MonoBehaviour
             FPSController.mouseLook.YSensitivity = Org_Y;
         }
     }
-    void Mouse_sensitivity_Value()
+    public void Mouse_sensitivity_Value()
     {
         Org_X = Data.Sensitivity;
         Org_Y = Data.Sensitivity;

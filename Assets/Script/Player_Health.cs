@@ -14,10 +14,13 @@ public class Player_Health : MonoBehaviour
     [SerializeField] int Health_P;
     [SerializeField] Slider Health_Slider;
     [SerializeField] GameObject Death_UI;
+    Torch torch;
     private void Start()
     {
+        torch = GetComponent<Torch>();
         Instantiat_Quick_Volume();
         Health_Definer();
+
     }
 
     private void Health_Definer()
@@ -26,21 +29,25 @@ public class Player_Health : MonoBehaviour
         {
             default:
                 Health_P = 1000;
+                torch.Decreasing_Speed = 0.3f;
                 break;
             case Game_Data.mode.Beginner:
                 Health_P = 1000;
+                torch.Decreasing_Speed = 0.3f;
                 break;
 
             case Game_Data.mode.Amateur:
                 Health_P = 700;
+                torch.Decreasing_Speed = 0.6f;
                 break;
 
             case Game_Data.mode.Nightmare:
                 Health_P = 400;
-                break;
-
-            
+                torch.Decreasing_Speed = 1f;
+                break;  
         }
+        Health_Slider.maxValue = Health_P;
+        Health_Slider.value = Health_P;
     }
 
     public void enemy_hit(int enemy_damage)

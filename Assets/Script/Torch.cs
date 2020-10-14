@@ -10,7 +10,7 @@ public class Torch : MonoBehaviour
     [SerializeField] float Min_Int, Max_Int;
     [SerializeField] float Dec_Spot, Dec_Int;
     bool decreasing = false;
-    [SerializeField] float Decreasing_Speed=1f;
+    public float Decreasing_Speed=1f;
     bool Ultimate_Mode = false;
     void Start()
     {

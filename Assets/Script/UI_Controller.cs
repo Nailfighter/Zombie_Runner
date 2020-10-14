@@ -24,8 +24,6 @@ public class UI_Controller : MonoBehaviour
     public void Next_level()
     {
         SceneManager.LoadScene(1);
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
     public void volume_changer(float level)
     {
@@ -36,7 +34,7 @@ public class UI_Controller : MonoBehaviour
     {
         Data.Sensitivity = level;
     }
-        public void set_difficulty(int Index)
+    public void set_difficulty(int Index)
     {
         switch(Index)
         {
@@ -50,5 +48,9 @@ public class UI_Controller : MonoBehaviour
                 Data.Difficulty = Game_Data.mode.Nightmare;
                 break;
         }
+    }
+    public void Tutorial()
+    {
+        SceneManager.LoadScene(3);
     }
 }

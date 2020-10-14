@@ -16,16 +16,33 @@ namespace Assets.Script
         }
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.L))
+            if (Input.GetKeyDown(KeyCode.P))
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.M))
             {
-                SceneManager.LoadScene(0);
+                //Time.timeScale = 0f;
+                FindObjectOfType<RigidbodyFirstPersonController>().enabled = false;
+
+                
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
+                SceneManager.LoadScene(0);
             }
+        }
+
+        void Anim_Vover()
+        {
+            GetComponent<Animator>().enabled = false;
+            GetComponent<RigidbodyFirstPersonController>().enabled = true;
+            print("Anim Vover");
+
+        }
+        void Anim_Start()
+        {
+            GetComponent<RigidbodyFirstPersonController>().enabled=false;
+            Invoke("Anim_Vover", 12.5f);
         }
     }
 }
