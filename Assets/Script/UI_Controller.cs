@@ -13,6 +13,10 @@ public class UI_Controller : MonoBehaviour
         Data.Sensitivity = 2f;
         Data.Difficulty = Game_Data.mode.Beginner;
     }
+    public void menu()
+    {
+        SceneManager.LoadScene(0);
+    }
     public void Quit()
     {
         Application.Quit();
@@ -20,6 +24,8 @@ public class UI_Controller : MonoBehaviour
     public void Next_level()
     {
         SceneManager.LoadScene(1);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
     public void volume_changer(float level)
     {

@@ -1,10 +1,12 @@
-﻿using System.Collections;
+﻿using JetBrains.Annotations;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
 
 public class Weapon_Zoomer : MonoBehaviour
 {
+    public Game_Data Data;
     RigidbodyFirstPersonController FPSController;
     [SerializeField] float Zoomed_Mouse_Sensitivity=1f;
     Camera Camera_M;
@@ -83,8 +85,10 @@ public class Weapon_Zoomer : MonoBehaviour
     }
     void Mouse_sensitivity_Value()
     {
-        Org_X = FPSController.mouseLook.XSensitivity;
-        Org_Y = FPSController.mouseLook.YSensitivity;
+        Org_X = Data.Sensitivity;
+        Org_Y = Data.Sensitivity;
+        FPSController.mouseLook.XSensitivity = Org_X;
+        FPSController.mouseLook.YSensitivity = Org_Y;
         Zoom_X = FPSController.mouseLook.XSensitivity * Zoomed_Mouse_Sensitivity;
         Zoom_Y = FPSController.mouseLook.XSensitivity * Zoomed_Mouse_Sensitivity;
     }

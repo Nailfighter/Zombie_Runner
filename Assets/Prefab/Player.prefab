@@ -310,10 +310,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95220aa26210faf4a80e6105337729d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Volume: {fileID: 804092295931918909}
-  m_Vignette: {fileID: 0}
+  Data: {fileID: 11400000, guid: b30528e0f95b866478e969dcdbdb124f, type: 2}
   color_blood: {r: 1, g: 0, b: 0, a: 1}
-  Health_P: 600
+  Health_P: 1000
   Health_Slider: {fileID: 0}
   Death_UI: {fileID: 0}
 --- !u!114 &924167194
@@ -368,6 +367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41b754f88369dc14c92edd56fa78a5b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Is_Game_Paused: 0
 --- !u!82 &616143419
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1590,6 +1590,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8179333489618639559, guid: 533555980da9b594fa9c08919c6b82fd,
+        type: 3}
+      propertyPath: Data
+      value: 
+      objectReference: {fileID: 11400000, guid: b30528e0f95b866478e969dcdbdb124f,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 533555980da9b594fa9c08919c6b82fd, type: 3}
 --- !u!4 &6891143218588052401 stripped

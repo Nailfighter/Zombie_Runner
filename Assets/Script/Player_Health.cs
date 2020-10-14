@@ -7,9 +7,9 @@ using UnityEngine.UI;
 
 public class Player_Health : MonoBehaviour
 {
-    public PostProcessVolume m_Volume;
-    public  Vignette m_Vignette;
-
+    PostProcessVolume m_Volume;
+    Vignette m_Vignette;
+    public Game_Data Data;
     [SerializeField] Color color_blood;
     [SerializeField] int Health_P;
     [SerializeField] Slider Health_Slider;
@@ -17,7 +17,32 @@ public class Player_Health : MonoBehaviour
     private void Start()
     {
         Instantiat_Quick_Volume();
+        Health_Definer();
     }
+
+    private void Health_Definer()
+    {
+        switch (Data.Difficulty)
+        {
+            default:
+                Health_P = 1000;
+                break;
+            case Game_Data.mode.Beginner:
+                Health_P = 1000;
+                break;
+
+            case Game_Data.mode.Amateur:
+                Health_P = 700;
+                break;
+
+            case Game_Data.mode.Nightmare:
+                Health_P = 400;
+                break;
+
+            
+        }
+    }
+
     public void enemy_hit(int enemy_damage)
     {
         Health_P -= enemy_damage;
