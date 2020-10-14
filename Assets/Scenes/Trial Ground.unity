@@ -2959,7 +2959,7 @@ MonoBehaviour:
 
     P to restart level
 
-    Esc to exit mosue lock'
+    Esc to exit mouse lock'
 --- !u!222 &621173768
 CanvasRenderer:
   m_ObjectHideFlags: 0
