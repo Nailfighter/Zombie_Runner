@@ -8,6 +8,7 @@ TagManager:
   - Dead_Enemy
   - Enle-123
   - Enle0
+  - Door
   layers:
   - Default
   - TransparentFX

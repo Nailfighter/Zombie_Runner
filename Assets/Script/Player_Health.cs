@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.UI;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class Player_Health : MonoBehaviour
 {
@@ -85,8 +86,13 @@ public class Player_Health : MonoBehaviour
 
     IEnumerator End_Game()
     {
+        FindObjectOfType<RigidbodyFirstPersonController>().enabled = false;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
+
         Death_UI.SetActive(true);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         Time.timeScale = 0f;
     }
 }

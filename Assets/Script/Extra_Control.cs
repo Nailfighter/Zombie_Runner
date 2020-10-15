@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEditor.SceneManagement;
 using UnityEngine.SceneManagement;
 using System;
 using UnityStandardAssets.Characters.FirstPerson;
@@ -25,7 +24,7 @@ namespace Assets.Script
                 //Time.timeScale = 0f;
                 FindObjectOfType<RigidbodyFirstPersonController>().enabled = false;
 
-                
+
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
                 SceneManager.LoadScene(0);

@@ -1103,7 +1103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20b045deae2822447b2d64ff2a8515e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 400002, guid: 97c61e91ba9c34d4c84a6f057919c3a0, type: 3}
   target_range: 10
   is_provoked: 0
   Rot_Time: 5

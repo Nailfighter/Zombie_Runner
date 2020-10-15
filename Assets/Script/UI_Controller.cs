@@ -8,10 +8,23 @@ public class UI_Controller : MonoBehaviour
 {
     [SerializeField] AudioMixer volume;
     public Game_Data Data;
+    public void retry()
+    {
+        SceneManager.LoadScene(1);
+    }
     private void Start()
     {
-        Data.Sensitivity = 2f;
-        Data.Difficulty = Game_Data.mode.Beginner;
+        if (!Data.initial_reset_done)
+        {
+            Data.Sensitivity = 2f;
+            Data.Difficulty = Game_Data.mode.Beginner;
+            Data.initial_reset_done = true;
+        }
+        if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
     }
     public void menu()
     {

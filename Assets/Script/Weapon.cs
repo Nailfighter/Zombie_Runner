@@ -7,6 +7,8 @@ using UnityEngine.UIElements;
 
 public class Weapon : MonoBehaviour
 {
+    bool message_on = false;
+    [SerializeField] GameObject Warning;
     AudioSource AudioSource;
     [SerializeField] AudioClip Weapon_Sound;
     [SerializeField] AudioClip Out_Of_ammo;
@@ -66,6 +68,7 @@ public class Weapon : MonoBehaviour
         Transform camera = Camera.main.transform;
         if(Physics.Raycast(camera.position, camera.forward, out hit_object, Gun_Range))
         {
+            Check_if_door(hit_object);
             Start_RayTracing(hit_object);
         }
         Ammo_Info.Reduce_Ammo(Ammo_Type);
@@ -74,6 +77,22 @@ public class Weapon : MonoBehaviour
 
     }
 
+    private void Check_if_door(RaycastHit hit)
+    {
+        if(hit.transform.gameObject.tag == "Door" && message_on==false)
+        {
+            StartCoroutine(Warning_Pop());
+        }
+    }
+
+    IEnumerator Warning_Pop()
+    {
+        message_on = true;
+        Warning.SetActive(true);
+        yield return new WaitForSeconds(5);
+        Warning.SetActive(false);
+        message_on = false;
+    }
     private void Start_RayTracing(RaycastHit hit_object)
     {
         impact_surafce(hit_object);
