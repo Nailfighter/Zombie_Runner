@@ -20,8 +20,9 @@ public class UI_Controller : MonoBehaviour
             Data.Difficulty = Game_Data.mode.Beginner;
             Data.initial_reset_done = true;
         }
-        if (SceneManager.GetActiveScene().buildIndex == 3)
+        if (SceneManager.GetActiveScene().buildIndex == 2)
         {
+            print("Cur");
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
